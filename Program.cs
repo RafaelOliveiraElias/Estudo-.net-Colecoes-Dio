@@ -9,6 +9,7 @@ op.ImprimirArray(array);
 System.Console.WriteLine("array ordenado");
 
 op.OrdenarBubbleSort(ref array);
+
 op.ImprimirArray(array);
 
 
