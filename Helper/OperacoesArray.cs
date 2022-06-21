@@ -28,5 +28,15 @@ namespace Colecoes.Helper
             var linha = string.Join(", ", array);
             System.Console.WriteLine(linha);
         }
+
+        public void Ordenar(ref int[] array)
+        {
+            Array.Sort(array);
+        }
+
+        public void Copiar(ref int[] array, ref int [] arrayDestino)
+        {
+            Array.Copy(array, arrayDestino, array.Length);
+        }
     }
 }

@@ -3,14 +3,24 @@ using Colecoes.Helper;
 
 OperacoesArray op = new OperacoesArray();
 int[] array = new int[5] { 6, 3, 8, 1, 9 };
+int[] arrayCopia = new int[10];
+
 System.Console.WriteLine("array original");
 op.ImprimirArray(array);
 
 System.Console.WriteLine("array ordenado");
 
-op.OrdenarBubbleSort(ref array);
+// op.OrdenarBubbleSort(ref array);
 
+op.Ordenar(ref array);
 op.ImprimirArray(array);
+
+System.Console.WriteLine("array antes da copia");
+op.ImprimirArray(arrayCopia);
+
+op.Copiar(ref array, ref arrayCopia);
+System.Console.WriteLine("array após da copia");
+op.ImprimirArray(arrayCopia);
 
 
 // int [] arrayInteiros = new int[3];
