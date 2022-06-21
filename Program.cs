@@ -12,7 +12,12 @@ op.RedimensionarArray(ref array, array.Length * 2 );
 
 
 System.Console.WriteLine($"capacidade atual do array após redimensionar: {array.Length}");
+//convertall = map no js
+string[] teste = Array.ConvertAll(array, each => each.ToString());
 
+System.Console.WriteLine(Array.ConvertAll(array, each => each.ToString())[1]);
+
+teste[2] = "3";
 // int valorProcurado = 3;
 
 // int valorAchado = op.ObterValor(array, valorProcurado);
