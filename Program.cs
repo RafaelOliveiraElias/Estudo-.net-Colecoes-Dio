@@ -5,16 +5,26 @@ OperacoesArray op = new OperacoesArray();
 int[] array = new int[5] { 6, 3, 8, 1, 9 };
 int[] arrayCopia = new int[10];
 
-int valorProcurado = 1;
+int valorProcurado = 3;
 
-bool TodosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
+int valorAchado = op.ObterValor(array, valorProcurado);
+int indice = op.ObterIndice(array, valorProcurado);
 
-if(TodosMaiorQue)
+if(indice > -1 && valorAchado > 0)
 {
-  System.Console.WriteLine("Todos maiores que: {0}", valorProcurado);
+  System.Console.WriteLine("Indice do elemento {0} é: {1}", valorAchado, indice);
 } else {
-  System.Console.WriteLine("Pelo menos um valor é maior que: {0}", valorProcurado);
+  System.Console.WriteLine("não achou");
 }
+
+// bool TodosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
+
+// if(TodosMaiorQue)
+// {
+//   System.Console.WriteLine("Todos maiores que: {0}", valorProcurado);
+// } else {
+//   System.Console.WriteLine("Pelo menos um valor é maior que: {0}", valorProcurado);
+// }
 
 // bool existe = op.Existe(array, valorProcurado);
 

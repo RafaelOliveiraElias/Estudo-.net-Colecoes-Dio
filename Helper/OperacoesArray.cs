@@ -49,5 +49,17 @@ namespace Colecoes.Helper
             //mesmo que o .every do JS
             return Array.TrueForAll(array, each => each > valor);
         }
+
+        public int ObterValor(int[] array, int valor)
+        {
+            //mesmo que o .every do JS Array.FindAll = filter no JS
+            return Array.Find(array, each => each == valor);
+        }
+
+        public int ObterIndice(int[] array, int valor)
+        {
+            //mesmo que o .every do JS Array.FindAll = filter no JS
+            return Array.IndexOf(array, valor);
+        }
     }
 }
