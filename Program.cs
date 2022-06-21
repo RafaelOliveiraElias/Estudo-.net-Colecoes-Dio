@@ -5,17 +5,25 @@ OperacoesArray op = new OperacoesArray();
 int[] array = new int[5] { 6, 3, 8, 1, 9 };
 int[] arrayCopia = new int[10];
 
-int valorProcurado = 3;
 
-int valorAchado = op.ObterValor(array, valorProcurado);
-int indice = op.ObterIndice(array, valorProcurado);
+System.Console.WriteLine($"capacidade atual do array: {array.Length}");
 
-if(indice > -1 && valorAchado > 0)
-{
-  System.Console.WriteLine("Indice do elemento {0} é: {1}", valorAchado, indice);
-} else {
-  System.Console.WriteLine("não achou");
-}
+op.RedimensionarArray(ref array, array.Length * 2 );
+
+
+System.Console.WriteLine($"capacidade atual do array após redimensionar: {array.Length}");
+
+// int valorProcurado = 3;
+
+// int valorAchado = op.ObterValor(array, valorProcurado);
+// int indice = op.ObterIndice(array, valorProcurado);
+
+// if(indice > -1 && valorAchado > 0)
+// {
+//   System.Console.WriteLine("Indice do elemento {0} é: {1}", valorAchado, indice);
+// } else {
+//   System.Console.WriteLine("não achou");
+// }
 
 // bool TodosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
 

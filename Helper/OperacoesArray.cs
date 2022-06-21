@@ -61,5 +61,10 @@ namespace Colecoes.Helper
             //mesmo que o .every do JS Array.FindAll = filter no JS
             return Array.IndexOf(array, valor);
         }
+
+        public void RedimensionarArray(ref int[] array, int novoTamanho)
+        {
+            Array.Resize(ref array, novoTamanho);
+        }
     }
 }
