@@ -1,23 +1,45 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Colecoes.Helper;
 
-OperacoesArray op = new OperacoesArray();
-int[] array = new int[5] { 6, 3, 8, 1, 9 };
-int[] arrayCopia = new int[10];
+List<string> estados =  new List<string>();
+estados.Add("SP");
+estados.Add("MG");
+estados.Add("BA");
+
+System.Console.WriteLine($"quantidade de elementos na lista {estados.Count()}");
+
+foreach (var item in estados)
+{
+  System.Console.WriteLine($"Elemento: {item}");
+}
+
+for (int i = 0; i < estados.Count(); i++)
+{
+  System.Console.WriteLine($"Elemento {estados[i]} tem indice {i} ");
+}
 
 
-System.Console.WriteLine($"capacidade atual do array: {array.Length}");
-
-op.RedimensionarArray(ref array, array.Length * 2 );
+// ABAIXO OPERAÇÔES COM ARRAY:
 
 
-System.Console.WriteLine($"capacidade atual do array após redimensionar: {array.Length}");
-//convertall = map no js
-string[] teste = Array.ConvertAll(array, each => each.ToString());
 
-System.Console.WriteLine(Array.ConvertAll(array, each => each.ToString())[1]);
+// OperacoesArray op = new OperacoesArray();
+// int[] array = new int[5] { 6, 3, 8, 1, 9 };
+// int[] arrayCopia = new int[10];
 
-teste[2] = "3";
+
+// System.Console.WriteLine($"capacidade atual do array: {array.Length}");
+
+// op.RedimensionarArray(ref array, array.Length * 2 );
+
+
+// System.Console.WriteLine($"capacidade atual do array após redimensionar: {array.Length}");
+// //convertall = map no js
+// string[] teste = Array.ConvertAll(array, each => each.ToString());
+
+// System.Console.WriteLine(Array.ConvertAll(array, each => each.ToString())[1]);
+
+// teste[2] = "3";
 // int valorProcurado = 3;
 
 // int valorAchado = op.ObterValor(array, valorProcurado);
