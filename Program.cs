@@ -1,25 +1,68 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Colecoes.Helper;
 
-OperacoesLista opLista = new OperacoesLista();
-List<string> estados =  new List<string>() {"SP", "MG", "BA"};
-string[] estadosArray = new string[2] {"SC", "MT"};
 
-System.Console.WriteLine($"quantidade de elementos na lista {estados.Count()}");
+//FILA LIFO
+
+Stack<string> pilhaLivros = new Stack<string>();
+pilhaLivros.Push(".NET");
+pilhaLivros.Push("DDD");
+pilhaLivros.Push("Código Limpo");
 
 
-estados.Insert(1, "RJ");
+System.Console.WriteLine($"Livros para a leitura {pilhaLivros.Count}");
+while (pilhaLivros.Count() > 0)
+{
+  System.Console.WriteLine($"Próximo livro para ler: {pilhaLivros.Peek()}");
+  System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
+}
 
-opLista.ImprimirLista(estados);
+System.Console.WriteLine($"Livros para a leitura {pilhaLivros.Count}");
+
+
+///////////////////////////////////////////////////////////////////////////
+
+//FILA TIPO FIFO:
+
+// Queue<string> fila = new Queue<string>();
+
+// fila.Enqueue("Leonardo");
+// fila.Enqueue("Eduardo");
+// fila.Enqueue("André");
+
+// while (fila.Count() > 0)
+// {
+//   System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+//   System.Console.WriteLine($"Vez de: {fila.Peek()}");
+//   System.Console.WriteLine($"{fila.Dequeue()} atendido");
+// }
+
+// System.Console.WriteLine($"Pessoas na fila: {fila.Count}");
+
+
+///////////////////////////////////////////////////////////////////////////
+
+//LISTAS ABAIXOOOO
+
+// OperacoesLista opLista = new OperacoesLista();
+// List<string> estados =  new List<string>() {"SP", "MG", "BA"};
+// string[] estadosArray = new string[2] {"SC", "MT"};
+
+// System.Console.WriteLine($"quantidade de elementos na lista {estados.Count()}");
+
+
+// estados.Insert(1, "RJ");
+
+// opLista.ImprimirLista(estados);
 
 // System.Console.WriteLine($"Removendo o elemento MG");
 
 // estados.Remove("MG");
 
-estados.AddRange(estadosArray);
+// estados.AddRange(estadosArray);
 
 
-opLista.ImprimirLista(estados);
+// opLista.ImprimirLista(estados);
 
 
 // foreach (var item in estados)
@@ -27,6 +70,9 @@ opLista.ImprimirLista(estados);
 //   System.Console.WriteLine($"Elemento: {item}");
 // }
 
+
+
+///////////////////////////////////////////////////////////////////////////
 
 
 // ABAIXO OPERAÇÔES COM ARRAY:
