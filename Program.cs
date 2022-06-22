@@ -2,22 +2,63 @@
 using Colecoes.Helper;
 
 
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+//DICTIONARY
+
+// Dictionary<string, string> estados = new Dictionary<string, string>();
+
+// estados.Add("SP","São Paulo");
+// estados.Add("MG","Minas Gerais");
+// estados.Add("BA","Bahia");
+
+// estados["sp".ToUpper()] = "Sãooo Paulo";
+
+
+// foreach (KeyValuePair<string, string> item in estados)
+// {
+//   System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+// System.Console.WriteLine(estados["sp".ToUpper()]); 
+
+
+// estados.Remove("SP");
+
+// foreach (KeyValuePair<string, string> item in estados)
+// {
+//   System.Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+// }
+
+
+// if (estados.TryGetValue("SC", out var estadoEncontrado))
+// {
+//   System.Console.WriteLine(estadoEncontrado);
+// } else 
+// {
+//     System.Console.WriteLine("BA Não existe");
+//}
+
+///////////////////////////////////////////////////////////////////////////
+
 //FILA LIFO
 
-Stack<string> pilhaLivros = new Stack<string>();
-pilhaLivros.Push(".NET");
-pilhaLivros.Push("DDD");
-pilhaLivros.Push("Código Limpo");
+// Stack<string> pilhaLivros = new Stack<string>();
+// pilhaLivros.Push(".NET");
+// pilhaLivros.Push("DDD");
+// pilhaLivros.Push("Código Limpo");
 
 
-System.Console.WriteLine($"Livros para a leitura {pilhaLivros.Count}");
-while (pilhaLivros.Count() > 0)
-{
-  System.Console.WriteLine($"Próximo livro para ler: {pilhaLivros.Peek()}");
-  System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
-}
+// System.Console.WriteLine($"Livros para a leitura {pilhaLivros.Count}");
+// while (pilhaLivros.Count() > 0)
+// {
+//   System.Console.WriteLine($"Próximo livro para ler: {pilhaLivros.Peek()}");
+//   System.Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
+// }
 
-System.Console.WriteLine($"Livros para a leitura {pilhaLivros.Count}");
+// System.Console.WriteLine($"Livros para a leitura {pilhaLivros.Count}");
 
 
 ///////////////////////////////////////////////////////////////////////////
