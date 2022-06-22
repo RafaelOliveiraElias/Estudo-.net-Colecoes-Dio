@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Colecoes.Helper;
 
+OperacoesLista opLista = new OperacoesLista();
 List<string> estados =  new List<string>();
 estados.Add("SP");
 estados.Add("MG");
@@ -8,15 +9,20 @@ estados.Add("BA");
 
 System.Console.WriteLine($"quantidade de elementos na lista {estados.Count()}");
 
-foreach (var item in estados)
-{
-  System.Console.WriteLine($"Elemento: {item}");
-}
 
-for (int i = 0; i < estados.Count(); i++)
-{
-  System.Console.WriteLine($"Elemento {estados[i]} tem indice {i} ");
-}
+opLista.ImprimirLista(estados);
+
+System.Console.WriteLine($"Removendo o elemento MG");
+
+estados.Remove("MG");
+opLista.ImprimirLista(estados);
+
+
+// foreach (var item in estados)
+// {
+//   System.Console.WriteLine($"Elemento: {item}");
+// }
+
 
 
 // ABAIXO OPERAÇÔES COM ARRAY:
