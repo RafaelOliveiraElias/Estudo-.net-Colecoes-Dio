@@ -1,6 +1,36 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Linq;
 using Colecoes.Helper;
 
+int[] arrayNumeros = new int[9] {1, 4, 4, 8, 0, 18, 100, 19, 100};
+
+var numerosPares =
+  from num in arrayNumeros
+  where num % 2 == 0
+  orderby num
+  select num;
+
+
+var numerosParesMetodo = arrayNumeros.Where(x => x % 2 == 0).OrderBy(x => x).ToList();
+
+System.Console.WriteLine("Numeros pares query: " + string.Join(", ", numerosPares));
+
+System.Console.WriteLine("Numeros pares Método: " + string.Join(", ", numerosParesMetodo));
+
+
+
+
+var minimo = arrayNumeros.Min();
+var maximo = arrayNumeros.Max();
+var medio = arrayNumeros.Average();
+var soma = arrayNumeros.Sum();
+var arrayUnico = arrayNumeros.Distinct().ToArray();
+
+System.Console.WriteLine($"valor máximo: {maximo}, valor mínimo: {minimo}, média : {medio}");
+
+System.Console.WriteLine($"Soma: {soma}");
+System.Console.WriteLine($"Array original: {string.Join(", ", arrayNumeros)}");
+System.Console.WriteLine($"Array novo: {string.Join(", ", arrayUnico.OrderBy(x=> x))}");
 
 
 
